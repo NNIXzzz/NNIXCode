@@ -1,6 +1,19 @@
 import random
+import numpy as np
+
+Scores = [0]
+Three = [3]
+
 diceE = ["adrenaline", "tornado", "burn", "eon", "redbull"]
 RDE = random.choice(diceE)
-RDE = str.replace((random.choice(RDE)), str(random.choice("*"))
+RDE1 = RDE
+RDE1 = RDE1.replace(random.choice(RDE1), '*')
+print(RDE1, end=' - ')
 
-print(RDE)
+answerdiceE = input()
+if answerdiceE == RDE:
+    print("Отгадал!", end=" ")
+    print(("Баллы:"),("["),(sum(Scores, random.randint(1,6))),("]"), sep="")
+elif answerdiceE != RDE:
+    print("Неудача!", end=" ")
+    print(("Баллы:"),(np.subtract(Scores, Three)), sep="")
