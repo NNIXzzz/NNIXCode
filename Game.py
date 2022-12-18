@@ -1,46 +1,37 @@
 import random
 import numpy as np
 import sys
-from Intro import intro
+from Level1 import level1
 
-intro()
+print("Привет, друг! Ты попал в мини-игру \"Отгадай энергетик\".")
 
-def start():
+while(True):
     
-    Scores = 0
-    Three = 3
-    diceE = ["adrenaline", "tornado", "burn", "eon", "redbull", "doubleyou"]
-
-    while Scores < 15:
-
-        RDE = random.choice(diceE)
-        diceE.remove(RDE)     
-        RDE1 = RDE
-        RDE1 = RDE1.replace(random.choice(RDE1), '*')
-        print(RDE1, end=' - ')
-
-        answerdiceE = input()
-        if answerdiceE == RDE:
-            Scores = Scores + Three
-            print("Отгадал!", end=" ")
-            print(("Баллы:"),(Scores),"""
-                """, sep="")
+    answer1 = input("Желаешь испытать свои знания в энергетиках?: ")
     
-        if answerdiceE == "стоп":
-            sys.exit()
-    
-        elif answerdiceE != RDE:
-            Scores = np.subtract(Scores, Three)
-            print("Неудача!", end=" ")
-            print(("Баллы:"),(Scores),"""
-                """, sep="")
-        
-        if diceE == []:
-            print("""Баллы закончились, попробуй ещё раз!""")
-            sys.exit()
+    if answer1 == "да":
+        break
+    elif answer1 == "нет":
+        sys.exit()
+    elif answer1 == "стоп":
+        sys.exit() 
+    else:
+        continue
+
+level1()
 
 print("""Поздравляю! Ты прошёл 1 уровень!""")
-level1 = input("""Хочешь продолжить? """)
+
+while(True): 
+    
+    level1answer = input("""Хочешь продолжить? """)
                
-if level1 == "да":
-    print("Ожидайте продолжения...")
+    if level1answer == "да":
+        print("Ожидайте продолжения...")
+        break
+    elif level1answer == "нет":
+        sys.exit
+    elif level1answer == "стоп":
+        sys.exit
+    else:
+        continue
