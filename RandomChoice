@@ -1,6 +1,0 @@
-import random
-diceE = ["adrenaline", "tornado", "burn", "eon", "redbull"]
-RDE = random.choice(diceE)
-RDE = str.replace(random.choice(RDE)), str(random.choice("*"))
-
-print(RDE)
