@@ -37,6 +37,6 @@ def level1():
         
         if diceE == []:
             print("""Баллы закончились, попробуй ещё раз!""")
-            diceE = ["adrenaline", "tornado", "burn", "eon", "redbull", "doubleyou", "drive", "gorilla"]
+            diceE = ["Adrenaline", "Tornado", "Burn", "Eon", "Redbull", "Doubleyou", "Drive", "Gorilla"]
             Scores = 0
             continue
